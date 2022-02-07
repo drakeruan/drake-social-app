@@ -1,0 +1,14 @@
+.container {
+    margin-top: 20px;
+}
+
+.container-item {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    text-align: center;
+}
+
+.content {
+    background-color: red;
+}
