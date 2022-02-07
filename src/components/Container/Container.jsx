@@ -2,11 +2,21 @@ import React from 'react';
 
 import './container.css'
 
+import TheSideBar from '../TheSideBar/TheSideBar';
+import Content from '../Content/Content';
+
 const Container = () => {
     return <div className="container">
-        <div className="container-item sidebar">SideBar</div>
-        <div className="container-item content">Content</div>
-        <div className="container-item ads-and-other">Ads And Other</div>
+        <div className="container-sidebar">
+            <TheSideBar />
+        </div>
+        <div className='container-content'>
+            <div className="container-content-item" >
+                <Content />
+            </div>
+            {/* <div className="container-content-item">Ads And Other</div> */}
+        </div>
+
     </div>;
 };
 

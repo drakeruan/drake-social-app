@@ -7,7 +7,7 @@ const TheHeader = () => {
       <p>Drake</p>
     </div>
     <div className="navbar-menubar-searchbox">
-      <input type="text" placeholder='Type your text' />
+      <input type="text" placeholder='Enter your text' />
       <button className="navbar-menubar-searchbox-btn">
         <i className='bx bx-search'></i>
       </button>

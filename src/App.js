@@ -1,4 +1,4 @@
-import TheLayout from "./components/TheLayout";
+import TheLayout from "./components/TheLayOut/TheLayOut";
 
 import 'boxicons/css/boxicons.min.css';
 import './app.css'
@@ -6,7 +6,7 @@ import './app.css'
 function App() {
   return (
     <div className="App">
-     <TheLayout />
+      <TheLayout />
     </div>
   );
 }
