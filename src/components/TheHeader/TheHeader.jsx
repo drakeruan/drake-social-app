@@ -1,23 +1,28 @@
 import React from 'react';
 
 import './theheader.css'
-
 const TheHeader = () => {
   return <nav className="navbar-menubar">
     <div className="navbar-menubar-logo">
-      <h3>Drake</h3>
+      <p>Drake</p>
     </div>
-    <div className="navbar-menubar-search-bar">
-      <input />
+    <div className="navbar-menubar-searchbox">
+      <input type="text" placeholder='Type your text' />
+      <button className="navbar-menubar-searchbox-btn">
+        <i className='bx bx-search'></i>
+      </button>
     </div>
     <div className="navbar-menubar-option">
       <ul className="navbar-menubar-option-list">
-        <li className="navbar-menubar-option-item">A</li>
-        <li className="navbar-menubar-option-item">B</li>
-        <li className="navbar-menubar-option-item">C</li>
+        <li className="navbar-menubar-option-item">
+          <i className='bx bx-pencil'></i>
+        </li>
+        <li className="navbar-menubar-option-item">
+          <i className='bx bx-bell'></i>
+        </li>
       </ul>
-      <div className="navbar-menubar-option-profile-avatar">
-        <img src="abc.png" alt="abc" />
+      <div className="navbar-menubar-option-avatar">
+        <img src={require("../../assets/zawarudo.jpg")} alt="zawarudo" />
       </div>
     </div>
   </nav>;

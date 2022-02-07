@@ -1,5 +1,6 @@
 import TheLayout from "./components/TheLayout";
 
+import 'boxicons/css/boxicons.min.css';
 import './app.css'
 
 function App() {

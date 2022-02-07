@@ -1,8 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 .navbar-menubar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    background-color: #fff
 }
 
+.navbar-menubar * {
+    background-color: #fff
+}
+
+.navbar-menubar-logo p {
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.navbar-menubar-searchbox {
+    width: 350px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+
+}
+
+.navbar-menubar-searchbox input {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    background: transparent;
+}
+
+.navbar-menubar-searchbox-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.navbar-menubar-searchbox-btn:active {
+    transform: scale(.9);
+}
+
+.navbar-menubar-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 10px;
+}
+
+.navbar-menubar-option-list {
+    list-style-type: none;
+}
+
+.navbar-menubar-option-item {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navbar-menubar-option-item i {
+    font-size: 1.3rem;
+}
+
+.navbar-menubar-option-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.navbar-menubar-option-avatar img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
