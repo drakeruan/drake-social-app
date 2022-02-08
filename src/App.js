@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import TheLayout from "./components/TheLayOut/TheLayOut";
 
-import './app.css'
+import './App.css'
 
 function App() {
   return (

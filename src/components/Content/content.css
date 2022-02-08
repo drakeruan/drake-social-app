@@ -1,9 +1,10 @@
 .content {
-    width: 50%;
+    width: 70%;
     min-width: 400px;
     margin-bottom: 100px;
 }
 
+/* Home */
 .content-options {
     display: flex;
     justify-content: space-between;

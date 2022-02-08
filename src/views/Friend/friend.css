@@ -1,4 +1,5 @@
 .friend-item {
+    flex:40%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -6,13 +7,13 @@
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 12px 30px;
-    margin-bottom: 5px;
+    margin: 5px;
 }
 
 .friend-item img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
     margin-right: 10px;
 }
 
@@ -53,11 +54,40 @@
 }
 
 .friend-item-brief-actions-list {
-    position: absolute;
     display: none;
     width: 200px;
+    position: absolute;
     top: 30px;
+    text-align: right;
+    right: 0;
+    background-color: #dadadada;
+    z-index: 2;
+    padding: 5px;
+    border-radius: 10px;
 }
+
+.friend-item-brief-actions-list::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    right: 12px;
+    background-color: #dadadada;
+    transform: rotate(-45deg);
+}
+
+.friend-item-brief-actions-list-item {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.friend-item-brief-actions-list-item:hover {
+    background-color: lightblue;
+}
+
 
 .friend-item-brief-actions-btn:hover {
     background-color: rgba(0, 0, 0, 0.2);
