@@ -16,3 +16,7 @@ a {
     outline: none;
     color: unset;
 }
+
+ul {
+    list-style-type: none;
+}

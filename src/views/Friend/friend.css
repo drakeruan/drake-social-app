@@ -33,7 +33,7 @@
     font-style: italic;
 }
 
-.friend-item-brief-info-btn {
+.friend-item-brief-actions-btn {
     display: grid;
     place-items: center;
     width: 25px;
@@ -48,8 +48,23 @@
     overflow: hidden;
 }
 
-.friend-item-brief-info-btn:hover {
-    background-color: rgba(0, 0, 0, 0.2)
+.friend-item-brief-actions {
+    position: relative;
+}
+
+.friend-item-brief-actions-list {
+    position: absolute;
+    display: none;
+    width: 200px;
+    top: 30px;
+}
+
+.friend-item-brief-actions-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.friend-item-brief-actions-btn:hover + .friend-item-brief-actions-list {
+    display: block;
 }
 .friend-item-brief-info-btn:active {
     background-color: rgba(0, 0, 0, 0.4)
