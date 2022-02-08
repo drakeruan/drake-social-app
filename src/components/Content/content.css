@@ -2,7 +2,6 @@
     width: 50%;
     min-width: 400px;
     margin-bottom: 100px;
-    /* background: #fff; */
 }
 
 .content-options {
@@ -25,6 +24,8 @@
     background: #fff;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .content-options-item-icon {
@@ -106,3 +107,6 @@
     font-size: 1.2rem;
 }
 
+.content-options-item:active {
+    transform: scale(0.9);
+}
