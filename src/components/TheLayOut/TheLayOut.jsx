@@ -10,8 +10,8 @@ import { Outlet } from 'react-router-dom';
 const TheLayOut = () => {
     const navigate = useNavigate()
     useEffect(() => {
-        const accessToken = localStorage.getItem('access_token');
-        if (!accessToken) {
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
             navigate('/login', { replace: true })
         }
     }, [navigate])

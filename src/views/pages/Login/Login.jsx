@@ -16,18 +16,24 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   useEffect(() => {
-    const accessToken = localStorage.getItem('access_token');
-    if (accessToken) {
+    const userId = localStorage.getItem('userId');
+    if (userId) {
       navigate(from, { replace: true })
     }
   }, [from, navigate])
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const user = data.users.find(u => u.username === usename && u.password === password)
-    setAuth({ id: user.id, username: user.username })
-    setUsername('') 
-    setPassword('')
+    try {
+      const user = data.users.find(u => u.username === usename && u.password === password)
+      setAuth({ id: user.id })
+      setUsername('')
+      setPassword('')
+      navigate(from, { replace: true })
+    } catch (error) {
+      // handle error message
+    }
+
   }
 
   return (
