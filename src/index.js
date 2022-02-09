@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import App from './App';
+import AuthProvider from './contexts/AuthProvider';
 import reportWebVitals from './reportWebVitals';
 
 import 'boxicons/css/boxicons.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-     <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <Routes>
-          <Route path="/*" element={<App />}/>
+          <Route path="/*" element={<App />} />
         </Routes>
-     </BrowserRouter>
+      </AuthProvider>
+    </BrowserRouter>
 
   </React.StrictMode >,
   document.getElementById('root')

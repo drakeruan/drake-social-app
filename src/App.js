@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
 
+import Login from './views/pages/Login/Login';
 import TheLayout from "./components/TheLayOut/TheLayOut";
 
 import './App.css'
-import Login from './views/pages/Login/Login';
 
 function App() {
   return (
