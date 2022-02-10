@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-.navbar-menubar {
+.topnav {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -8,20 +8,20 @@
     background-color: #fff;
     position: fixed;
     top: 0;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-menubar * {
+.topnav * {
     background-color: #fff
 }
 
-.navbar-menubar-logo p {
+.topnav-logo p {
     padding: 10px;
     font-size: 1.5rem;
     font-family: 'Dancing Script', cursive;
 }
 
-.navbar-menubar-searchbox {
+.topnav-searchbox {
     width: 350px;
     height: 30px;
     outline: none;
@@ -33,7 +33,7 @@
 
 }
 
-.navbar-menubar-searchbox input {
+.topnav-searchbox input {
     outline: none;
     border: none;
     width: 100%;
@@ -43,7 +43,7 @@
     background: transparent;
 }
 
-.navbar-menubar-searchbox-btn {
+.topnav-searchbox-btn {
     position: absolute;
     top: 0;
     right: 0;
@@ -55,32 +55,32 @@
     cursor: pointer;
 }
 
-.navbar-menubar-searchbox-btn:active {
+.topnav-searchbox-btn:active {
     transform: scale(.9);
 }
 
-.navbar-menubar-option {
+.topnav-sub {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px 10px;
 }
 
-.navbar-menubar-option-list {
+.topnav-sub-option {
     list-style-type: none;
 }
 
-.navbar-menubar-option-item {
+.topnav-sub-option-item {
     display: inline-block;
     padding: 10px;
     cursor: pointer;
 }
 
-.navbar-menubar-option-item i {
+.topnav-sub-option-item i {
     font-size: 1.3rem;
 }
 
-.navbar-menubar-option-avatar {
+.topnav-sub-dropdown-avatar {
     width: 40px;
     height: 40px;
     min-width: 40px;
@@ -91,8 +91,33 @@
     margin: 0 10px;
 }
 
-.navbar-menubar-option-avatar img {
+.topnav-sub-dropdown-avatar img {
     width: 100%;
     object-fit: cover;
     object-position: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.topnav-sub-dropdown {
+    position: relative;
+}
+
+.topnav-sub-dropdown-menu {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 45px;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+}
+
+.topnav-sub-dropdown-menu-item  {
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.topnav-sub-dropdown-menu-item:last-child {
+    border-top: 1px solid rgb(0, 0, 0, 0.1);
 }

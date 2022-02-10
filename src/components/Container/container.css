@@ -6,3 +6,7 @@
     display: flex;
     width: 100%;
 }
+
+.container-content-item {
+    width: 70%
+}

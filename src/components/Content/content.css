@@ -1,5 +1,4 @@
 .content {
-    width: 70%;
     min-width: 400px;
     margin-bottom: 100px;
 }
@@ -47,6 +46,7 @@
     border-radius: 10px;
     padding: 10px 20px;
     margin: 20px 0px;
+    width: 100%;
 }
 
 .content-post-profile {

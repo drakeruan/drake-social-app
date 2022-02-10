@@ -18,15 +18,17 @@ const Login = () => {
   useEffect(() => {
     const userId = localStorage.getItem('userId');
     if (userId) {
+      setAuth({ userId })
       navigate(from, { replace: true })
     }
-  }, [from, navigate])
+  }, [from, navigate, setAuth])
 
   const handleSubmit = (e) => {
     e.preventDefault()
     try {
       const user = data.users.find(u => u.username === usename && u.password === password)
-      setAuth({ id: user.id })
+      localStorage.setItem('userId', user.id);
+      setAuth({ userId: user.id })
       setUsername('')
       setPassword('')
       navigate(from, { replace: true })
@@ -59,6 +61,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className='form-control'
+            autoComplete="off"
             required
           />
         </div>

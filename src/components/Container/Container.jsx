@@ -8,6 +8,7 @@ import Content from '../Content/Content';
 import Home from '../../views/pages/Home/Home';
 import Friends from '../../views/pages/Friends/Friends';
 import Follows from '../../views/pages/Follows/Follows';
+import Missing from '../../views/Missing/Missing';
 
 const Container = () => {
   return <div className="container">
@@ -21,6 +22,7 @@ const Container = () => {
             <Route path="/" element={<Home />} />
             <Route path="/friends" element={<Friends />} />
             <Route path="/follows" element={<Follows />} />
+            <Route path="/*" element={<Missing />} />
           </Route>
         </Routes>
       </div>

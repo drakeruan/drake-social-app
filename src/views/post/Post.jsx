@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Post = () => {
+const Post = ({ content, views, likes }) => {
   return <div className='content-post'>
     <div className='content-post-profile'>
       <img src={require('../../assets/zawarudo.jpg')} alt='avatar' />
@@ -10,11 +10,9 @@ const Post = () => {
       </div>
     </div>
 
-    <div className='content-post-text'>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    </div>
+    <p className='content-post-text'>
+      {content}
+    </p>
     <div className='content-post-picture'>
       <img src={require('../../assets/awsome.jpg')} alt='content_picture' />
     </div>
@@ -22,7 +20,7 @@ const Post = () => {
       <ul>
         <li className='content-post-actions-item'>
           <i className='bx bx-show'></i>
-          <span>{'100k'}</span>
+          <span>{views?.length}</span>
         </li>
         <li className='content-post-actions-item'>
           <i className='bx bx-comment'></i>
@@ -30,7 +28,7 @@ const Post = () => {
         </li>
         <li className='content-post-actions-item'>
           <i className='bx bx-like'></i>
-          <span>{'9k'}</span>
+          <span>{likes?.length}</span>
         </li>
       </ul>
     </div>

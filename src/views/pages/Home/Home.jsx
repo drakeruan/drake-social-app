@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Post from '../../Post/Post'
+import data from '../../../data'
 
 const Home = () => {
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    const lastPost = data.posts.slice(-10)
+    setPosts(lastPost)
+  }, [])
   return (<>
     <div className='content-options'>
       <div className='content-options-item'>
@@ -24,7 +31,8 @@ const Home = () => {
         <div className='content-options-item-text'>New Video</div>
       </div>
     </div>
-    <Post />
+    {posts.map((post) => <Post key={post.id} {...post} />)}
+    {/* <Post /> */}
   </>
   )
 };
