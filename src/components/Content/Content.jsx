@@ -1,11 +1,115 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom'
+import CreateBox from '../CreateBox/CreateBox';
 
-import './content.css'
+import './Content.css'
 
 const Content = () => {
-  return <div className="content">
-    <Outlet />
+  return <div className='content'>
+    <div className='content__header'>
+      Home
+    </div>
+
+    <CreateBox />
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    {/* <Outlet /> */}
   </div>
 };
 

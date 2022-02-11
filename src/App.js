@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
 import Login from './views/pages/Login/Login';
-import TheLayout from "./components/TheLayOut/TheLayOut";
+import Layout from "./components/Layout/Layout";
 import RequireAuth from './components/RequireAuth/RequireAuth'
 
 import './App.css'
@@ -10,7 +10,7 @@ function App() {
   return (
     <Routes>
       <Route element={<RequireAuth />}>
-        <Route path="/*" element={<TheLayout />} />
+        <Route path="/*" element={<Layout />} />
       </Route>
       <Route path="/login" element={<Login />} />
     </Routes>
