@@ -3,14 +3,12 @@
     box-sizing: border-box;
 }
 
-
 .app {
-    max-width: 1300px;
+    position: relative;
+    max-width: 750px;
     margin: 0 auto;
-    font-family: sans-serif;
-    height: 100vh;
-    display: flex;
     padding: 0 10px;
+    font-family: sans-serif;
 }
 
 a {
@@ -21,4 +19,8 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+.d-block {
+    display: block;
 }

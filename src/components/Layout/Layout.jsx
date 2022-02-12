@@ -1,13 +1,13 @@
 import React from 'react';
 
 import './Layout.css'
-import TheSideBar from '../Sidebar/Sidebar';
-import Content from '../Content/Content';
+import Header from '../Header/Header';
+import Feed from '../Feed/Feed';
 
 const TheLayOut = () => {
     return <div className="app">
-        <TheSideBar />
-        <Content />
+        <Header />
+        <Feed />
     </div>
 };
 

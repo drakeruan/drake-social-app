@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
 
-import useAuth from '../../../hooks/useAuth';
-import data from '../../../data'
+import useAuth from '../../hooks/useAuth';
+import data from '../../data'
 
 import './login.css'
 
@@ -25,15 +25,17 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log('login')
     try {
       const user = data.users.find(u => u.username === usename && u.password === password)
+      console.log(user)
       localStorage.setItem('userId', user.id);
       setAuth({ userId: user.id })
       setUsername('')
       setPassword('')
       navigate(from, { replace: true })
     } catch (error) {
-      // handle error message
+      console.log(error)
     }
 
   }
