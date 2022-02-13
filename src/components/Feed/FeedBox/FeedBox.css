@@ -36,7 +36,7 @@
     width: 100%;
 }
 
-.feed__box__content__input>input {
+.feed__box__content__input {
     width: 100%;
     font-size: 1.5rem;
     padding: 12px 30px;
@@ -45,12 +45,24 @@
     border: none;
 }
 
-.feed__box__content__input>input:focus {
+.feed__box__content__input:focus {
     border: 1px solid #00d0ff;
 }
 
+.feed__box__content__btn {
+    margin-left: 10px;
+    outline: none;
+    background-color: #00d0ff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 20px;
+}
+
 .feed__box__option {
-    display: flex;
+    display: none;
     align-items: center;
     margin: 12px auto;
 

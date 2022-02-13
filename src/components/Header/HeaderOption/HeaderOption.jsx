@@ -5,9 +5,9 @@ import './HeaderOption.css'
 
 const HeaderOption = () => {
   return <div className="header__option">
-    <HeaderOptionItem icon={<i className='bx bx-home'></i>} />
-    <HeaderOptionItem icon={<i className='bx bx-user'></i>} />
-    <HeaderOptionItem icon={<i className='bx bx-search-alt-2'></i>} />
+    <HeaderOptionItem to='/' icon={<i className='bx bx-home'></i>} />
+    <HeaderOptionItem to='/friend' icon={<i className='bx bx-user'></i>} />
+    {/* <HeaderOptionItem icon={<i className='bx bx-search-alt-2'></i>} /> */}
   </div>
 };
 

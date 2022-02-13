@@ -1,19 +1,13 @@
-import React, { useEffect } from 'react';
-import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const RequireAuth = () => {
-  const { auth, setAuth } = useAuth()
-  const location = useLocation()
-  
-  useEffect(() => {
-    const userId = localStorage.getItem('userId')
-    setAuth({ userId })
-  }, [setAuth]);
+  const { auth } = useAuth()
 
-  return auth?.userId
+  return auth?.user
     ? <Outlet />
-    : <Navigate to={'/login'} state={{ from: location }} replace />
+    : <Navigate to={'/login'} />
 };
 
 export default RequireAuth;

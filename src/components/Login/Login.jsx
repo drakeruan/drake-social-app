@@ -1,79 +1,43 @@
-import { useState, useEffect } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import useAuth from '../../hooks/useAuth';
-import data from '../../data'
 
+import { authentication } from '../../firebase/firebase';
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import './login.css'
+import LoginBtn from './LoginBtn/LoginBtn';
 
 const Login = () => {
-  const { setAuth } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location?.state?.from?.pathname || '/'
+  const { setAuth } = useAuth()
+  const navigate = useNavigate()
 
-  const [usename, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  useEffect(() => {
-    const userId = localStorage.getItem('userId');
-    if (userId) {
-      setAuth({ userId })
-      navigate(from, { replace: true })
-    }
-  }, [from, navigate, setAuth])
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('login')
-    try {
-      const user = data.users.find(u => u.username === usename && u.password === password)
-      console.log(user)
-      localStorage.setItem('userId', user.id);
-      setAuth({ userId: user.id })
-      setUsername('')
-      setPassword('')
-      navigate(from, { replace: true })
-    } catch (error) {
-      console.log(error)
-    }
-
+  const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider()
+    signInWithPopup(authentication, provider)
+      .then(res => {
+        const { user } = res;
+        setAuth({ user })
+        navigate('/')
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   return (
-    <div className="login-container">
-      <h1 className="login-title">Login</h1>
-      <form onSubmit={handleSubmit}>
-        <div className='form-group'>
-          <label htmlFor='username'>Username</label>
-          <input
-            text='text'
-            id='username'
-            value={usename}
-            onChange={(e) => setUsername(e.target.value)}
-            className='form-control'
-            required
-          />
+    <div className='container'>
+      <div className='login'>
+        <div className='login__title'>
+          Sign In With
         </div>
-        <div className='form-group'>
-          <label htmlFor='password'>Password</label>
-          <input
-            type='password'
-            id='password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className='form-control'
-            autoComplete="off"
-            required
-          />
-        </div>
-        <div className='form-group'>
-          <button className='submit-btn' type='submit'>
-            Login
-          </button>
-        </div>
-      </form>
+        <LoginBtn color='#cf4332' hanleClick={signInWithGoogle} icon={<i className='bx bxl-google'></i>} text='Sign in with Google' />
+        <LoginBtn color='#483330' icon={<i className='bx bxl-github'></i>} text='Sign in with Github' />
+        <LoginBtn color='#1d9bf0' icon={<i className='bx bxl-twitter'></i>} text='Sign in with Twiiter' />
+
+      </div>
     </div>
+
+
   )
 }
 
